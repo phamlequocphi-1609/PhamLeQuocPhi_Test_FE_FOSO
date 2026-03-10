@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "@/components/layout";
-import { HomePage } from "@/features/home";
 import { AboutPage } from "@/features/about";
 import { ContactPage } from "@/features/contact";
 import { ROUTES } from "./routes";
@@ -13,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <ServicesPage />,
       },
       {
         path: ROUTES.ABOUT,
