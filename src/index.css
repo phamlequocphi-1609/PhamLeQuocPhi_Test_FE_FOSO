@@ -1,2 +1,46 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fce48c;
+  --color-brand-100: #f6c649;
+  --color-brand-200: #b97951;
+  --color-brand-300: #824c08;
+  --color-brand-400: #614f38;
+  --color-brand-500: #523c14;
+  --color-brand-600: #291e0a;
+  --color-brand-700: #1a1408;
+  --color-brand-800: #0f0c05;
+  --color-brand-900: #070503;
+  --color-brown: #824c08;
+  --color-lightYellow: #fce48c;
+  --color-mediumYellow: #f6c649;
+  --color-red64: #bc978c;
+  --color-lightGray: #e5e3dc;
+}
+
+:root {
+  --Brown: #824c08;
+  --Light-yellow: #fce48c;
+  --Medium-yellow: #f6c649;
+  --color-red-64: #bc978c;
+}
+
+body {
+  /* background: linear-gradient(
+    355.08deg,
+    #614f38 21.5%,
+    rgba(164, 120, 40, 0.2) 91.79%
+  );
+  min-height: 100vh; */
+  background-color: #523c14;
+  overflow-x: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
