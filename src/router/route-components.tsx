@@ -5,6 +5,7 @@ import { ContactPage } from "@/features/contact";
 import { ROUTES } from "./routes";
 import { ServicesPage } from "@/features/services";
 import { NewsPage } from "@/features/news";
+import { HomePage } from "@/features/home";
 export const router = createBrowserRouter([
   {
     path: ROUTES.HOME,
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ServicesPage />,
+        element: <HomePage />,
       },
       {
         path: ROUTES.ABOUT,
