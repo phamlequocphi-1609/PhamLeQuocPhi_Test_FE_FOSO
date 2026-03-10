@@ -1,73 +1,158 @@
-# React + TypeScript + Vite
+# The OM Lounge - React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# PHAM LE QUOC PHI - TEST- FOSO_FE
 
-Currently, two official plugins are available:
+A modern nail salon and spa booking application built with React, TypeScript, and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Home Page**: Landing page with hero section and service overview
+- **Services Page**: Complete service catalog with categories and pricing
+- **About Page**: Company information and team details
+- **News Page**: Latest updates and announcements
+- **Contact Page**: Contact information and location
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** - UI library with hooks and modern patterns
+- **TypeScript** - Type safety and better development experience
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **ESLint + Prettier** - Code formatting and linting
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+### UI Components
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Shadcn/ui** - Modern component library
+- **Lucide Icons** - Icon library
+- **Class Variance Authority** - Component variants
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+### Testing
+
+- **Vitest** - Unit testing framework
+- **Testing Library** - React component testing
+- **Coverage Reports** - Test coverage tracking
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/            # Base UI components (Button, Card, etc.)
+│   ├── layout/         # Layout components (Header, Footer)
+│   └── headers/        # Header components (HeaderNav, HeaderTop)
+├── features/           # Feature-based modules
+│   ├── home/           # Home page components
+│   ├── services/        # Services feature pages
+│   ├── booking/         # Booking system
+│   ├── about/           # About page
+│   ├── news/            # News page
+│   └── contact/         # Contact page
+├── router/             # Routing configuration
+├── constants/          # App constants and data
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── types/              # TypeScript type definitions
+└── test/               # Unit tests
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# or
+yarn install
 ```
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+
+# or
+yarn dev
+```
+
+### Build
+
+```bash
+# Build for production
+npm run build
+
+# or
+yarn build
+```
+
+### Testing
+
+```bash
+# Run unit tests
+npm run test
+
+# or
+yarn test
+
+# Run tests with coverage
+npm run test --coverage
+
+# or
+yarn test --coverage
+```
+
+### Linting
+
+```bash
+# Run ESLint
+npm run lint
+
+# or
+yarn lint
+
+# Fix linting issues
+npm run lint --fix
+
+# or
+yarn lint --fix
+```
+
+## Deployment
+
+### GitHub Actions
+
+The project includes automated CI/CD pipeline with:
+
+- **Code Quality**: ESLint checks on every push
+- **Testing**: Automated unit test execution
+- **Build**: Production build verification
+- **Coverage**: Test coverage reporting
+
+### Environment Variables
+
+Required environment variables for production:
+
+```env
+VITE_API_URL=your-api-url
+VITE_APP_NAME=The OM Lounge
+```
+
+## Available Scripts
+
+- `dev` - Start development server
+- `build` - Build for production
+- `preview` - Preview production build
+- `test` - Run unit tests
+- `lint` - Run ESLint
+- `lint:fix` - Fix ESLint issues
+- `type-check` - Run TypeScript compiler
